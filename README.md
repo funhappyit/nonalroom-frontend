@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# ✅ React Todo App (with Context API)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![screenshot](./screenshot.png)
 
-## Available Scripts
+이 프로젝트는 React의 Context API와 useReducer를 활용한 **할 일 관리(Todo List)** 애플리케이션입니다.  
+컴포넌트 간 상태 공유를 위해 props 대신 Context를 사용해 구조를 단순화했습니다.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ 주요 기술 스택
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**
+- **Context API**
+- **useReducer / useRef / useCallback**
+- **Vanilla CSS (모듈화됨)**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ 기능 소개
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ✅ 새 할 일 등록
+- ✅ 할 일 완료 체크/해제 (토글)
+- ✅ 할 일 삭제
+- ✅ 총 개수 / 완료 / 미완료 통계
+- ✅ 키워드 검색
+- ✅ 날짜 표시 (`createDate` → `YYYY. M. D.` 형식)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 폴더 구조
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+\`\`\`
+src/
+├── App.js
+├── context/
+│   └── TodoContext.js         # 상태 관리 로직
+├── component/
+│   ├── Header.js / .css       # 상단 날짜 및 제목
+│   ├── TodoEditor.js / .css   # 입력창 (추가 버튼 포함)
+│   ├── TodoItem.js / .css     # 개별 항목 (체크박스 + 삭제)
+│   ├── TodoList.js / .css     # 목록 + 검색창 + 통계
+│   └── TestComp.js            # 테스트용 컴포넌트 (선택)
+\`\`\`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📸 데모 화면
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| 메인 화면 |
+|-----------|
+| ![Todo UI](./screenshot.png)|
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🧩 설치 및 실행
 
-## Learn More
+\`\`\`bash
+git clone https://github.com/your-username/react-context-todo.git
+cd react-context-todo
+npm install
+npm start
+\`\`\`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💡 향후 개선 아이디어
 
-### Code Splitting
+- ✅ 로컬 스토리지에 저장
+- ✅ 수정 기능 추가
+- ✅ 우선순위/카테고리/마감일 도입
+- ✅ Typescript 마이그레이션
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 👩‍💻 제작자
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Your Name (lucyeipstein)**  
+- GitHub: [@your-username](https://github.com/your-username)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
