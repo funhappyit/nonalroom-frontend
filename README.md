@@ -29,18 +29,7 @@
 
 ## 📂 폴더 구조
 
-\`\`\`
-src/
-├── App.js
-├── context/
-│   └── TodoContext.js         # 상태 관리 로직
-├── component/
-│   ├── Header.js / .css       # 상단 날짜 및 제목
-│   ├── TodoEditor.js / .css   # 입력창 (추가 버튼 포함)
-│   ├── TodoItem.js / .css     # 개별 항목 (체크박스 + 삭제)
-│   ├── TodoList.js / .css     # 목록 + 검색창 + 통계
-│   └── TestComp.js            # 테스트용 컴포넌트 (선택)
-\`\`\`
+<img width="468" alt="image" src="https://github.com/user-attachments/assets/d56479f3-b2dd-43a6-89b3-63af3a492951" />
 
 ---
 
