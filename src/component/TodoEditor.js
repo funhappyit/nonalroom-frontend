@@ -1,34 +1,25 @@
+import { useState, useContext } from "react";
+import { TodoContext } from "../context/TodoContext";
 import "./TodoEditor.css";
-import {useRef, useState} from "react";
 
+const TodoEditor = () => {
+    const { onCreate } = useContext(TodoContext);
+    const [content, setContent] = useState("");
 
-const TodoEditor = ({onCreate}) => {
-    const [content,setContent] = useState("");
-    const inputRef = useRef();
-    const onChangeConent = (e) => {
-        setContent(e.target.value);
-    };
-    const onSubmit = () => {
-        if(!content){
-            inputRef.current.focus();
-            return;
-        }
+    const handleSubmit = () => {
+        if (!content.trim()) return;
         onCreate(content);
         setContent("");
     };
-    const onKeyDown = (e) => {
-        if(e.keyCode === 13){
-            onSubmit();
-        }
-    }
 
     return (
         <div className="TodoEditor">
-            <h4>새로운 Todo 작성하기</h4>
-            <div className="editor_wrapper">
-                <input ref={inputRef} value={content} onKeyDown={onKeyDown} onChange={onChangeConent} placeholder="새로운 Todo..."/>
-                <button onClick={onSubmit}>추가</button>
-            </div>
+            <input
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                placeholder="할 일을 입력하세요"
+            />
+            <button onClick={handleSubmit}>추가</button>
         </div>
     );
 };
